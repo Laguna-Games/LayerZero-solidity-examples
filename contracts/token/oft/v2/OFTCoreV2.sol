@@ -17,7 +17,7 @@ abstract contract OFTCoreV2 is NonblockingLzApp {
     uint8 public constant PT_SEND = 0;
     uint8 public constant PT_SEND_AND_CALL = 1;
 
-    uint8 public immutable sharedDecimals;
+    uint8 public sharedDecimals;
 
     mapping(uint16 => mapping(bytes => mapping(uint64 => bool))) public creditedPackets;
 

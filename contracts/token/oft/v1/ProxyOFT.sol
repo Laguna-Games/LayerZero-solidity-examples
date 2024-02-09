@@ -8,7 +8,7 @@ import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 contract ProxyOFT is OFTCore {
     using SafeERC20 for IERC20;
 
-    IERC20 internal immutable innerToken;
+    IERC20 internal innerToken;
 
     constructor(address _lzEndpoint, address _token) OFTCore(_lzEndpoint) {
         innerToken = IERC20(_token);

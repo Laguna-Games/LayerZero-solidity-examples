@@ -10,7 +10,7 @@ import "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol";
 contract ProxyONFT1155 is ONFT1155Core, IERC1155Receiver {
     using ERC165Checker for address;
 
-    IERC1155 public immutable token;
+    IERC1155 public token;
 
     constructor(address _lzEndpoint, address _proxyToken) ONFT1155Core(_lzEndpoint) {
         require(_proxyToken.supportsInterface(type(IERC1155).interfaceId), "ProxyONFT1155: invalid ERC1155 token");

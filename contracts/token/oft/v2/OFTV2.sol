@@ -6,7 +6,7 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 import "./BaseOFTV2.sol";
 
 contract OFTV2 is BaseOFTV2, ERC20 {
-    uint internal immutable ld2sdRate;
+    uint internal ld2sdRate;
 
     constructor(
         string memory _name,

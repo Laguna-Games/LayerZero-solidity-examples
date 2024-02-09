@@ -8,8 +8,8 @@ import "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.sol";
 contract ProxyOFTWithFee is BaseOFTWithFee {
     using SafeERC20 for IERC20;
 
-    IERC20 internal immutable innerToken;
-    uint internal immutable ld2sdRate;
+    IERC20 internal innerToken;
+    uint internal ld2sdRate;
 
     // total amount is transferred from this chain to other chains, ensuring the total is less than uint64.max in sd
     uint public outboundAmount;

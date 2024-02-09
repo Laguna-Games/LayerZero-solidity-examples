@@ -10,7 +10,7 @@ import "./ONFT721Core.sol";
 contract ProxyONFT721 is ONFT721Core, IERC721Receiver {
     using ERC165Checker for address;
 
-    IERC721 public immutable token;
+    IERC721 public token;
 
     constructor(
         uint _minGasToTransfer,
